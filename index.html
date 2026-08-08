@@ -796,7 +796,7 @@ button { cursor: pointer; }
   }
   function safeFileName(name){return (name||'ученик').replace(/[^a-zа-яё0-9]+/gi,'_').replace(/^_+|_+$/g,'')||'ученик'}
   async function download(){
-    toast('Готовим Скачать карточку без белых полей...');
+    toast('Готовим карточку...');
     try{
       const page=await buildA4Canvas();
       const blob=await canvasToPng300Dpi(page);
